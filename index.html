@@ -4,11 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Password Generator</title>
 </head>
 <body>
-    
-    
+    <div class="outer-container">
+    <div class="container">
+        <h1>Password Generator</h1>
+        <div class="password">
+            <span id="final-password"></span>
+        </div>
+        <div class="settings">
+        <label for="length">Enter password Length: </label>
+        <input type="number" size="2" id="length" name="length"></input>
+    </div>
+    <div class="settings">
+        <label for="lower">Lower Case Letters:</label>
+        <input type="checkbox" id="lower" name="lower" />
+    </div>
+    <div class="settings">
+        <label for="upper">Upper Case Letters:</label>
+        <input type="checkbox" id="upper" name="upper" />
+    </div>
+    <div class="settings">
+        <label for="numbers">Numbers:</label>
+        <input type="checkbox" id="numbers" name="numbers" />
+
+    </div>
+    <div class="settings">
+        <label for="special">Special Character:</label>
+        <input type="checkbox" id="special" name="special" />
+
+    </div>
+        <div class="submit-btn">
+        <button id="btn" onclick="generatePassword()">Generate Password</button>
+    </div>
+    </div>
+</div>
     <script src="PasswordGen.js"></script>
 </body>
 </html>
