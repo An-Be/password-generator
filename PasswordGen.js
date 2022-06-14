@@ -40,11 +40,11 @@ function generateNeededChars() {
 }
 
 //function to generate password
-function generatePassword(length, str) {
+function generatePassword(length, string) {
   let finalPassword = "";
   for (let i = 0; i < length; i++) {
-    let randomNumber = Math.floor(Math.random() * str.length);
-    finalPassword += str.charAt(randomNumber);
+    let randomNumber = Math.floor(Math.random() * string.length);
+    finalPassword += string.charAt(randomNumber);
   }
   return finalPassword;
 }
@@ -52,9 +52,10 @@ function generatePassword(length, str) {
 //event listeners
 button.addEventListener("click", function () {
   let length = lengthElement.value;
-  let str = generateNeededChars();
-  let finalPassword = generatePassword(length, str);
+  let string = generateNeededChars();
+  let finalPassword = generatePassword(length, string);
 
   password.textContent = finalPassword;
   password.style.textAlign = "center";
+  str = "";
 });
